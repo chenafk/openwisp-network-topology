@@ -43,7 +43,7 @@ class AbstractLink(ShareableOrgMixin, TimeStampedEditableModel):
     )
     cost = models.FloatField()
     cost_text = models.CharField(max_length=24, blank=True)
-    STATUS = Choices('up', 'down')
+    STATUS = Choices(_('up'), _('down'))
     status = StatusField()
     properties = JSONField(
         default=dict,

@@ -1,6 +1,7 @@
 import logging
 
 from django.conf import settings
+from django.utils.translation import gettext_lazy as _
 
 # 'pre_django_setup' is supposed to be a logger
 # that can work before registered Apps are
@@ -24,14 +25,14 @@ def get_settings_value(option, default):
 
 
 DEFAULT_PARSERS = [
-    ('netdiff.OlsrParser', 'OLSRd (txtinfo/jsoninfo)'),
-    ('netdiff.BatmanParser', 'batman-advanced (jsondoc/txtinfo)'),
-    ('netdiff.BmxParser', 'BMX6 (q6m)'),
-    ('netdiff.NetJsonParser', 'NetJSON NetworkGraph'),
-    ('netdiff.CnmlParser', 'CNML 1.0'),
-    ('netdiff.OpenvpnParser', 'OpenVPN'),
-    ('netdiff.WireguardParser', 'Wireguard'),
-    ('netdiff.ZeroTierParser', 'ZeroTier'),
+    ('netdiff.OlsrParser', _('OLSRd (txtinfo/jsoninfo)')),
+    ('netdiff.BatmanParser', _('batman-advanced (jsondoc/txtinfo)')),
+    ('netdiff.BmxParser', _('BMX6 (q6m)')),
+    ('netdiff.NetJsonParser', _('NetJSON NetworkGraph')),
+    ('netdiff.CnmlParser', _('CNML 1.0')),
+    ('netdiff.OpenvpnParser', _('OpenVPN')),
+    ('netdiff.WireguardParser', _('Wireguard')),
+    ('netdiff.ZeroTierParser', _('ZeroTier')),
 ]
 
 PARSERS = DEFAULT_PARSERS + get_settings_value('PARSERS', [])

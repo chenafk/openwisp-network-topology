@@ -24,7 +24,7 @@ class OpenwispNetworkTopologyConfig(AppConfig):
         register_menu_group(
             position=110,
             config={
-                'label': 'Network Topology',
+                'label': _('Network Topology'),
                 'items': {
                     1: {
                         'label': _('Topologies'),
